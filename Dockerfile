@@ -2,7 +2,7 @@
 FROM node:12.20.0-alpine as builder
 LABEL maintainer="Breeze"
 
-# RUN apk add --no-cache python make g++
+RUN apk add --no-cache python make g++
 RUN yarn global add @tarojs/cli@3.3.16
 WORKDIR /usr/src/app
 COPY . .
